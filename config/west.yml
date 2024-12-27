@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/DoctorWangWang
     - name: inorichi
       url-base: https://github.com/inorichi
-     - name: badjeff
-      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: DoctorWangWang
@@ -16,8 +14,13 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: inorichi
       revision: main
-      - name: zmk-split-peripheral-input-relay
-      remote: badjeff
+ - name: zmk
+      remote: zmkfirmware
       revision: main
+      # remote: zephyr-3
+      # revision: zephyr/3.1-upgrade
+      # remote: kuolemax
+      # revision: encoder-fix
+      import: app/west.yml
   self:
     path: config
